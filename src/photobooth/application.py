@@ -88,6 +88,10 @@ def _create_app() -> FastAPI:
     _app.mount(
         "/sharepage/", StaticFiles(directory=Path(__file__).parent.parent.resolve().joinpath("web/sharepage"), html=True), name="web_sharepage"
     )
+
+    # mount custom icon assets, served at /api/icons for use by the frontend
+    _app.mount("/api/icons", StaticFiles(directory="userdata/icons"), name="custom_icons")
+
     # serve the spa # this is last so it catches all if not found a match earlier.
     _app.mount("/", StaticFiles(directory=Path(__file__).parent.parent.resolve().joinpath("web/frontend"), html=True), name="web_spa")
 
