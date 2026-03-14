@@ -17,6 +17,7 @@ class UiTrigger(BaseModel):
         default=True,
         description="Show the button to trigger the process.",
     )
+    show_background: bool = Field(default=True, description="Show a background behind this button.")
     title: str = Field(
         default="",
         description="Label used for the button.",
