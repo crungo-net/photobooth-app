@@ -23,7 +23,7 @@ class UiTrigger(BaseModel):
     )
     icon: str = Field(
         default="",
-        description="Icon used for the button (any icon from material icons, see documentation).",
+        description="Icon used for the button (any icon from material icons, see documentation. Also accepts image paths served at /api/icons/).",
     )
     use_custom_color: bool = Field(
         default=False,

@@ -39,6 +39,7 @@ def _create_basic_folders():
     os.makedirs(CONFIG_PATH, exist_ok=True)
     os.makedirs(TMP_PATH, exist_ok=True)
     os.makedirs(RECYCLE_PATH, exist_ok=True)
+    os.makedirs(os.path.join(USERDATA_PATH, "icons"), exist_ok=True)
 
 
 def _copy_demo_assets_to_userdata():
