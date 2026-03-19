@@ -103,6 +103,7 @@ class GroupUiSettings(BaseModel):
         default="😃",
         description="Message to display at the end of the capture countdown.",
     )
+    takepic_show_flash: bool = Field(default=True, description="Display a flash effect to indicate when an image capture is happening.")
 
     AUTOCLOSE_NEW_ITEM_ARRIVED: int = Field(
         default=30,
